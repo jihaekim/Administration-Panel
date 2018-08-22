@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  resources :teacher
-  resources :student
-  resources :cohort
-  resources :course
+  resources :teachers
+  resources :students
+  resources :cohorts
+  resources :courses
 end
 
 # get '/teachers', to:'teachers#new'
