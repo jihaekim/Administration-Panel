@@ -1,7 +1,7 @@
-<%= form_with model: @student do |form| %>
-    <%= form.text_field :fname %>
-    <%= form.text_field :lname %>
-    <%= form.number_field :age %>
-    <%= form.number_field :cohort_id %>
+<%= form_with model: @student do |form| %></p>
+    <p>first name: <%= form.text_field :fname %></p>
+    <p>last name: <%= form.text_field :lname %></p>
+    <p>age: <%= form.number_field :age %></p>
+    <p>cohort id: <%= form.number_field :cohort_id %></p>
     <%= form.submit %>
   <% end %>
