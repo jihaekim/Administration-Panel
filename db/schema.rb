@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2018_08_21_214127) do
     t.string "lname"
     t.integer "age"
     t.integer "cohort_id"
+    t.string "pic_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -47,6 +48,7 @@ ActiveRecord::Schema.define(version: 2018_08_21_214127) do
     t.integer "age"
     t.integer "salary"
     t.string "education"
+    t.string "pic_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
