@@ -4,12 +4,53 @@
     <title>PanelApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+
+
+<div id="nav">
+<div id="logo">
+<h3>NYCBA</h3>
+</div>
+
+<div id="icon">
+<div><img src="http://i66.tinypic.com/50muex.png"></div>
+<p>Name</p>
+<div id="dropdown">
+<i class="fas fa-sort-down"></i>
+ <div id="drop-content">
+ <p>Logout</p>
+ </div>
+</div>
+</div>
+</div>
+
+
+<div id="sidenav">
+
+<div id="icon-div">
+<div><img src="http://i63.tinypic.com/2l5o1y.jpg"></div>
+<p>Name</p>
+</div>
+
+<div id="links">
+<a href="/"><div>Dashboard<i class="fas fa-angle-right"></i></div></a>
+<a href="/students"><div>Students<i class="fas fa-angle-right"></i></div></a>
+<a href="/teachers"><div>Teachers<i class="fas fa-angle-right"></i></div></a>
+<a href="/cohorts"><div>Cohort<i class="fas fa-angle-right"></i></div></a>
+<a href="/courses"><div>Courses<i class="fas fa-angle-right"></i></div></a>
+</div>
+
+</div>
+
+
+
     <%= yield %>
+
+
   </body>
 </html>
