@@ -1,8 +1,12 @@
+
+
+<div id="display-inner">
 <%= form_with model: @teacher do |form| %>
-    <%= form.text_field :fname %>
-    <%= form.text_field :lname %>
-    <%= form.text_field :age %>
-    <%= form.text_field :salary %>
-    <%= form.text_field :education %>
+    <%= form.text_field :fname, placeholder:"first name"%>
+    <%= form.text_field :lname, placeholder:"last name" %>
+    <%= form.text_field :age, placeholder:"age" %>
+    <%= form.text_field :salary,placeholder:"salary"%>
+    <%= form.text_field :education,placeholder:"education" %>
     <%= form.submit %>
 <% end %>
+</div>

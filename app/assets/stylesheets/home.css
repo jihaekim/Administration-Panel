@@ -1,0 +1,194 @@
+body{
+    margin:0;
+    background-color:#d9dbdb;
+    font-family: 'Roboto', sans-serif;
+
+
+}
+#nav{
+    display:flex;
+    box-shadow: 1px 1px 8px 3px rgba(206, 198, 198, 0.75);
+    height: 8%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+}
+#logo{
+    display: flex;
+    align-items: center;
+    background-color:#00c6c3;
+    width:240px;
+}
+#logo h3{
+    font-family: sans-serif;
+    letter-spacing: 1.5px;
+    margin: 0 auto;
+    color:white;
+}
+
+#icon{
+    display: flex;
+    margin-left: auto;
+    justify-content: space-evenly;
+    width: 125px;
+    align-items: center;
+}
+#dropdown{
+    position:relative;
+    display:inline-block;
+}
+
+#drop-content{
+    display:none;
+    position:absolute;
+    z-index: 1;
+    min-width:160px;
+}
+
+#dropdown:hover #drop-content{
+    display:block;
+}
+
+#sidenav{
+    height:100%;
+    width: 16.5%;
+    position:fixed;
+    z-index: 1;
+    left:0;
+    overflow-x:hidden;
+    padding-top: 5%;
+    background-color: white;
+    top: 8.21%;
+
+}
+#links{
+    margin-top: 15%;
+}
+#links div{
+    align-items: center;
+    display: flex;
+    height:60px;
+    justify-content: space-around;
+}
+
+#links div:hover{
+    background-color:#eff2f2;
+}
+#sidenav div a{
+    text-decoration: none;
+    color:black;
+}
+
+#icon-div{
+    display:flex;
+    align-items: center;
+    padding-left: 22%;
+}
+
+#icon-div p {
+    padding-left: 5%;
+}
+
+#display-container{
+    margin-left:auto;
+    margin-top: 6%;
+    width: 80%;
+}
+#dashboard{
+    margin-left: 5%;
+    margin-top: 3%;
+    font-size: 1.75em;
+}
+
+.data-div{
+    width:250px;
+    height:150px;
+    background-color:#ffc871;
+}
+#display-inner{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+
+.data-div{
+    box-shadow: 2px 2px 3px 3px rgba(206, 198, 198, 0.75);
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+
+}
+ .data-div i{
+    font-size: 2.5em;
+ }
+
+ .data-div div{
+    line-height: .5;
+    text-align: center;
+    font-size: 1.25em;
+ }
+
+ .data-div:hover{
+     /* background-color: white;
+     color:#ffc871;
+     box-shadow: inset 0 0 0 3px #ffc871; */
+     box-shadow: 7px 7px 3px 3px rgba(206, 198, 198, 0.75);
+
+ }
+
+ .data-link{
+     text-decoration: none;
+     color:black;
+ }
+
+
+ /* cohort css */
+ #display-courses{
+    width: 83.5%;
+    margin-left: auto;
+    min-height: 800px; 
+}
+
+ #edit-div{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 10%;
+    margin-top: 5%;
+ }
+
+ #edit-div a{
+    box-shadow: 2px 2px 3px 3px rgba(206, 198, 198, 0.75);
+    background-color: #00CFD9;
+    color: white;
+    text-decoration: none;
+    margin: 3%;
+    width: 150px;
+    text-align: center;
+    border-radius: 10px;
+    height: 50px;
+ }
+
+ #edit-div a div{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /* margin: auto; */
+    height: 100%;
+ }
+
+ #course-container{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    position: relative;
+    left: 6.8%;
+ }
+ .course-div{
+     width:20%;
+    border:1px solid black;
+    height: 300px;
+    margin-right: 2%;
+    margin-bottom: 2%;
+ }
