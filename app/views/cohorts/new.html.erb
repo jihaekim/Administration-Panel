@@ -1,8 +1,12 @@
+<div id="display-container">
+
 <%= form_with model: @cohort do |form| %>
-    <%= form.text_field :name, placeholder:"Cohort Name"%>
-   <p>start date: <%= form.date_field :start_date%></p>
-    <p> end date : <%= form.date_field :end_date %></p>
-    <%= form.number_field :teacher_id, placeholder:"teacher id" %>
-    <%= form.number_field :course_id, placeholder:"course id" %>
-    <%= form.submit %>
-  <% end %>
+  <%= form.text_field :name %>
+  <%= form.date_field :start_date %>
+  <%= form.date_field :end_date %>
+  <%= form.number_field :teacher_id %>
+  <%= form.number_field :course_id %>
+  <%= form.submit %>
+<% end %>
+
+</div>

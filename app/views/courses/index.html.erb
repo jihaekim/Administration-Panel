@@ -1,0 +1,26 @@
+<div id="display-courses">
+
+<div id="edit-div">
+<a href=""><div><i class="fas fa-plus"></i><p>Add Course</p></div></a>
+<a href=""><div><i class="fas fa-plus"></i><p>Edit Course</p></div></a>
+</div>
+
+<div>
+<div><h3> All Courses </h3></div>
+<div id="course-container">
+
+<% @courses.each do |course|%>
+    <div class="course-div">
+    <div><a href="#display all the cohorts in that course"><img src="https://via.placeholder.com/240x150"></a></div>
+    <div>
+    <div><%=course.name%></div>
+    <div><%=course.hours%></div>
+  </div>
+   </div>
+<% end %>
+</div>
+
+
+</div>
+
+</div>

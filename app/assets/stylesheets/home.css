@@ -8,9 +8,12 @@ body{
 #nav{
     display:flex;
     box-shadow: 1px 1px 8px 3px rgba(206, 198, 198, 0.75);
-    height: 70px;
-    padding-right:7%;
+    height: 8%;
     background-color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 5;
 }
 #logo{
     display: flex;
@@ -50,13 +53,14 @@ body{
 
 #sidenav{
     height:100%;
-    width:240px;
+    width: 16.5%;
     position:fixed;
     z-index: 1;
     left:0;
     overflow-x:hidden;
     padding-top: 5%;
     background-color: white;
+    top: 8.21%;
 
 }
 #links{
@@ -88,9 +92,9 @@ body{
 }
 
 #display-container{
-    width:1200px;
     margin-left:auto;
     margin-top: 6%;
+    width: 80%;
 }
 #dashboard{
     margin-left: 5%;
@@ -141,16 +145,17 @@ body{
 
 
  /* cohort css */
- #display-cohorts{
-    width:1200px;
-    margin-left:auto;
-   
+ #display-courses{
+    width: 83.5%;
+    margin-left: auto;
+    min-height: 800px; 
 }
 
  #edit-div{
     display: flex;
     justify-content: flex-end;
     margin-right: 10%;
+    margin-top: 5%;
  }
 
  #edit-div a{
@@ -171,4 +176,19 @@ body{
     justify-content: space-evenly;
     /* margin: auto; */
     height: 100%;
+ }
+
+ #course-container{
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    position: relative;
+    left: 6.8%;
+ }
+ .course-div{
+     width:20%;
+    border:1px solid black;
+    height: 300px;
+    margin-right: 2%;
+    margin-bottom: 2%;
  }

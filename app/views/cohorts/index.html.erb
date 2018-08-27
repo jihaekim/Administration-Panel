@@ -1,10 +1,27 @@
-<div id="display-cohorts">
-
-<div id="edit-div">
-<a href=""><div><i class="fas fa-plus"></i><p>Add Cohort</p></div></a>
-<a href=""><div><i class="fas fa-plus"></i><p>Edit Cohort</p></div></a>
-</div>
 
 
+
+
+<div>
+<table>
+<tr>
+<th>Name</th>
+<th>Start date</th>
+<th>End date</th>
+<th>Instructor</th>
+<th>Course</th>
+</tr>
+<% @cohorts.each do |cohort|%>
+    <tr>
+    <th><%=cohort.name%></th>
+    <th><%=cohort.start_date%></th>
+    <th><%=cohort.end_date%></th>
+   <%current_teacher = @teachers.find(cohort.teacher_id)%>
+   <th><%=current_teacher.fname%> <%=current_teacher.lname%></p></th>
+   <%current_course = @courses.find(cohort.course_id)%>
+   <th><%=current_course.name%></th>
+   </tr>
+   <% end %>
+</table>
 
 </div>
