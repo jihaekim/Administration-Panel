@@ -1,6 +1,6 @@
 body{
     margin:0;
-    background-color:#d9dbdb;
+    background-color:#EAEEF3;
     font-family: 'Roboto', sans-serif;
 
 
@@ -8,7 +8,7 @@ body{
 #nav{
     display:flex;
     box-shadow: 1px 1px 8px 3px rgba(206, 198, 198, 0.75);
-    height: 8%;
+    height: 70px;
     background-color: white;
     position: fixed;
     top: 0;
@@ -58,9 +58,9 @@ body{
     z-index: 1;
     left:0;
     overflow-x:hidden;
-    padding-top: 5%;
+    padding-top:100px;
     background-color: white;
-    top: 8.21%;
+    top:72px;
 
 }
 #links{
@@ -93,11 +93,11 @@ body{
 
 #display-container{
     margin-left:auto;
-    margin-top: 6%;
+    margin-top: 9%;
     width: 80%;
 }
 #dashboard{
-    margin-left: 5%;
+    margin-left: 2%;
     margin-top: 3%;
     font-size: 1.75em;
 }
@@ -151,44 +151,203 @@ body{
     min-height: 800px; 
 }
 
- #edit-div{
+ .add-btn-div{
     display: flex;
     justify-content: flex-end;
-    margin-right: 10%;
+    margin-right: 6.7%;
     margin-top: 5%;
+    margin-bottom: 5%;
  }
 
- #edit-div a{
-    box-shadow: 2px 2px 3px 3px rgba(206, 198, 198, 0.75);
-    background-color: #00CFD9;
-    color: white;
-    text-decoration: none;
-    margin: 3%;
-    width: 150px;
-    text-align: center;
-    border-radius: 10px;
-    height: 50px;
- }
 
- #edit-div a div{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    /* margin: auto; */
-    height: 100%;
- }
 
- #course-container{
+ .course-container{
     display: flex;
     justify-content: start;
     flex-wrap: wrap;
     position: relative;
-    left: 6.8%;
+    left: 6.7%;
  }
  .course-div{
-     width:20%;
+    width: 231px;
     border:1px solid black;
     height: 300px;
     margin-right: 2%;
     margin-bottom: 2%;
  }
+
+ /* cohorts table */
+
+ table{
+    margin: 0 auto;
+    margin-top: 5%;
+    border-collapse: collapse;
+    width: 96%;
+    background-color:white;
+    margin-bottom: 5%;
+ }
+
+ td, th {
+    border: 1px solid#E6ECF2;
+    text-align: left;
+    padding: 8px;
+}
+
+th{
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+}
+#table-container{
+    border: 1px solid#E6ECF2;
+    width: 96%;
+    margin: 0 auto;
+
+}
+.table-div{
+    margin: 0 auto;
+    width: 96%;
+    background-color: white;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    box-shadow: 3px 3px 5px 5px rgba(206, 198, 198, 0.75);
+}
+
+tr:nth-child(even) {
+    background-color:#F3F4F6;
+}
+
+.div-inner{
+    width: 83.5%;
+    margin-left: auto;
+    margin-top: 8%;
+    margin-bottom: 15%;
+}
+.title-div{
+    margin-bottom: 6%;
+    margin-left: 2%;
+}
+.add-div{
+    margin-left: 87%;
+    margin-top: 5%;
+}
+.add-cohort{
+    box-shadow: 0.5px 0.5px 0.5px 1px rgba(206, 198, 198, 0.75);
+    padding: 10px;
+    color: black;
+    text-decoration: none;
+    background-color:#00c6c3;
+   
+}
+
+.add-cohort:hover{
+    box-shadow: 1px 1px 1px 3px rgba(206, 198, 198, 0.75);
+}
+
+/* New cohort css */
+.new-form-div{
+    font-size: 15px;
+    color: grey;
+    margin: 0 auto;
+    width: 75%;
+}
+
+.new-input-div{
+    margin-top: 40px;
+}
+.new-input-div input{
+    font-size: 15px;
+    height:30px;
+    width: 350px;
+    border: none;
+    border-bottom: 1px solid #c6c9cc;
+}
+
+
+.form-inner{
+    justify-content: space-between;
+    display:flex;
+}
+.new-submit{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+.new-submit input{
+    background-color:#e0e0e0;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.new-submit input:hover{
+    box-shadow: 1px 1px 1px 2px rgba(206, 198, 198, 0.75);
+}
+.form-title-div{
+    width: 90%;
+    margin: 0 auto;
+}
+
+hr{
+    width:90%;
+}
+
+.img-section{
+    text-align:center;
+}
+
+.profile-img-div{
+    width: 90px;
+    height: 90px;
+    margin: 0 auto;
+    margin-top: 15px;
+}
+
+.profile-img-div img{
+    width: 100%;
+    height: 100%;
+}
+.profile-border{
+    width: 130px;
+    height: 130px;
+    border: 2px solid #c7c3c3;
+    border-radius: 50%;
+    margin-left: 200px;
+}
+
+#profile-table-div{
+    width: 75%;
+}
+.info-container{
+    margin: 0 auto;
+    width: 60%;
+    margin-top: 5%;
+}
+.name-display{
+    display: flex;
+    justify-content: space-between;
+}
+
+.display-info{
+    margin: 0 auto;
+    width: 70%;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 18px;
+}
+
+#teacher-table-div{
+    width: 75%;
+}
+.small-table-div{
+    margin: 0 auto;
+    width: 25%;
+    background-color: white;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    box-shadow: 3px 3px 5px 5px rgba(206, 198, 198, 0.75);
+    margin-left: 5%;
+}
+.course-display{
+    margin: 0 auto;
+    width: 77%;
+}

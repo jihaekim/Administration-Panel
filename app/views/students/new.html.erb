@@ -1,10 +1,25 @@
-<div id="display-container">
-<%= form_with model: @student do |form| %>
 
-    <%= form.text_field :fname,placeholder:"first name" %>
-    <%= form.text_field :lname ,placeholder:"last name"  %>
-    <%= form.number_field :age ,placeholder:"age" %>
-    <p>cohort id: <%= form.number_field :cohort_id %></p>
-    <%= form.submit %>
-  <% end %>
+<div class="div-inner">
+<div class="title-div"><h3>Add Student</h3></div>
+<div class="table-div">
+<div class="form-title-div"><h3>Student Details</h3></div>
+<hr>
+
+
+
+<%= form_with model: @student do |form| %>
+  <div class="new-form-div">
+  <div class="form-inner">
+  <div class="new-input-div"><div><p>First Name</p></div><%= form.text_field :fname %></div>
+  <div class="new-input-div"><div><p>Last Name</p></div> <%= form.text_field :lname %></div>
+    </div>
+    <div class="new-input-div"><div><p>Age</p></div><%= form.number_field :age %></div>
+    <div class="new-input-div"><div><p>Cohort Id</p></div><%= form.number_field :cohort_id %></div>
+    <div class="new-submit"><%= form.submit %></div>
   </div>
+  <% end %>
+  
+
+</div>
+</div>
+</div>

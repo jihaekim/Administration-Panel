@@ -1,0 +1,31 @@
+
+
+
+<div class="div-inner">
+<div class="title-div"><h3>All Students</h3></div>
+<div class="table-div">
+
+<div id="table-container">
+<div class="add-div"><a class="add-cohort" href="/students/new"><i class="fas fa-plus"></i>Add Student</a></div>
+<table>
+<tr>
+<th></th>
+<th>Name</th>
+<th>Age</th>
+<th>Cohort</th>
+<th>Edit</th>
+</tr>
+<% @students.each do |student|%>
+    <tr>
+    <td class="img-section"><a href="/students/<%=student.id%>"><img src="http://i63.tinypic.com/wc1dhf.png"></a> </td>
+    <td><%=student.fname%> <%=student.lname%></td>
+    <td><%=student.age%></td>
+    <td><%= @cohorts.find(student.cohort_id).name%></td>
+   <td><div><a href="/students/<%=student.id%>/edit"><i class="far fa-edit"></i></a></div></td>
+   </tr>
+   <% end %>
+</table>
+
+</div>
+</div>
+</div>

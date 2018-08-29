@@ -1,12 +1,24 @@
-<div id="display-container">
+
+<div class="div-inner">
+<div class="title-div"><h3>Add Cohort</h3></div>
+<div class="table-div">
+<div class="form-title-div"><h3>Cohort Details</h3></div>
+<hr>
 
 <%= form_with model: @cohort do |form| %>
-  <%= form.text_field :name %>
-  <%= form.date_field :start_date %>
-  <%= form.date_field :end_date %>
-  <%= form.number_field :teacher_id %>
-  <%= form.number_field :course_id %>
-  <%= form.submit %>
+  <div class="new-form-div">
+  <div class="new-input-div"><div><p>Cohort Name</p></div><%= form.text_field :name%></div>
+
+  <div class="form-inner">
+  <div class="new-input-div"><div><p>Start Date</p></div> <%= form.date_field :start_date%></div>
+  <div class="new-input-div"><div><p>End Date</p></div> <%= form.date_field :end_date %></div>
+  </div>
+  <div class="new-input-div"><div><p>Teacher Name</p></div><%= form.number_field :teacher_id %></div>
+  <div class="new-input-div"><div><p>Course Name</p></div><%= form.number_field :course_id %></div>
+  <div class="new-submit"><%= form.submit %></div>
+  </div>
 <% end %>
 
+</div>
+</div>
 </div>

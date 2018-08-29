@@ -1,9 +1,27 @@
+<div class="div-inner">
+<div class="title-div"><h3>Edit Teacher</h3></div>
+<div class="table-div">
+<div class="form-title-div"><h3>Teacher Details</h3></div>
+<hr>
+
+
+
 <%= form_with model: @teacher do |form| %>
-    <%= form.text_field :fname, placeholder:"first name"%>
-    <%= form.text_field :lname, placeholder:"last name" %>
-    <%= form.text_field :age, placeholder:"age" %>
-    <%= form.text_field :salary,placeholder:"salary"%>
-    <%= form.text_field :pic_url,placeholder:"picture url" %>
-    <%= form.text_field :education,placeholder:"education" %>
-    <%= form.submit %>
+    <div class="new-form-div">
+
+    <div class="form-inner">
+    <div class="new-input-div"><div><p>First Name</p></div><%= form.text_field :fname %></div>
+    <div class="new-input-div"><div><p>Last Name</p></div><%= form.text_field :lname %></div>
+    </div>
+    <div class="new-input-div"><div><p>Age</p></div><%= form.text_field :age %></div>
+    <div class="new-input-div"><div><p>Salary</p></div><%= form.text_field :salary %></div>
+    <div class="new-input-div"><div><p>Education</p></div><%= form.text_field :education %></div>
+    <div class="new-submit"><%= form.submit %></div>
+
+</div>
 <% end %>
+
+
+</div>
+</div>
+</div>
