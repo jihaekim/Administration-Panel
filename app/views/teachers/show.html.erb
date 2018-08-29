@@ -1,6 +1,27 @@
-<img src="<%=@teacher.pic_url%>">
-<p>First name: <%=@teacher.fname %></p>
-<p>Last name: <%=@teacher.lname %></p>
-<p>Age: <%=@teacher.age %></p>
-<p>Salary: <%=@teacher.salary %></p>
-<p>Education: <%=@teacher.education %></p>
+
+
+<div class="div-inner">
+<div class="title-div"><h3>Teacher Profile</h3></div>
+<div id="teacher-table-div" class="table-div">
+
+<div class = "info-container">
+
+<div class="profile-border">
+<div class="profile-img-div"><img src="http://i66.tinypic.com/2hwoao9.png"></div>
+</div>
+
+<div class="display-info">
+<div class="name-display"><div>First name: <%=@teacher.fname %> </div> <div>Last name: <%=@teacher.lname %></div> </div>
+
+<div>Age: <%=@teacher.age %></div>
+<div>Salary:<%=@teacher.salary %> </div>
+<div>Education:<%=@teacher.education %> </div>
+
+
+</div>
+
+
+</div>
+
+</div>
+</div>

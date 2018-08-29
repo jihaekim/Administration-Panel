@@ -1,8 +1,12 @@
 
 
 
+<div class="div-inner">
+<div class="title-div"><h3>All Cohorts</h3></div>
+<div class="table-div">
 
-<div>
+<div id="table-container">
+<div class="add-div"><a class="add-cohort" href="/cohorts/new"><i class="fas fa-plus"></i>Add Course</a></div>
 <table>
 <tr>
 <th>Name</th>
@@ -10,18 +14,22 @@
 <th>End date</th>
 <th>Instructor</th>
 <th>Course</th>
+<th>Edit</th>
 </tr>
 <% @cohorts.each do |cohort|%>
     <tr>
-    <th><%=cohort.name%></th>
-    <th><%=cohort.start_date%></th>
-    <th><%=cohort.end_date%></th>
+    <td><%=cohort.name%></td>
+    <td><%=cohort.start_date%></td>
+    <td><%=cohort.end_date%></td>
    <%current_teacher = @teachers.find(cohort.teacher_id)%>
-   <th><%=current_teacher.fname%> <%=current_teacher.lname%></p></th>
+   <td><%=current_teacher.fname%> <%=current_teacher.lname%></p></td>
    <%current_course = @courses.find(cohort.course_id)%>
-   <th><%=current_course.name%></th>
+   <td><%=current_course.name%></td>
+   <td><div><a href="/cohorts/<%=cohort.id%>/edit"><i class="far fa-edit"></i></a></div></td>
    </tr>
    <% end %>
 </table>
 
+</div>
+</div>
 </div>
