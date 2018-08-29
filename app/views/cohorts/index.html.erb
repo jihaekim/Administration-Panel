@@ -18,7 +18,7 @@
 </tr>
 <% @cohorts.each do |cohort|%>
     <tr>
-    <td><%=cohort.name%></td>
+    <td><a href="/cohorts/<%=cohort.id%>"><%=cohort.name%></a></td>
     <td><%=cohort.start_date%></td>
     <td><%=cohort.end_date%></td>
    <%current_teacher = @teachers.find(cohort.teacher_id)%>

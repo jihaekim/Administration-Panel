@@ -12,25 +12,17 @@
 
 <% @teachers.each do |teacher|%>
     <div class="course-div">
-    <div><a href="/teachers/<%=teacher.id%>"><img src="https://via.placeholder.com/231x150"></a></div>
 
-    <div>
-    <div><%=teacher.fname%> <%=teacher.lname%></div>
-    <div><%=teacher.age%></div>
+    <div class="teacher-border">
+    <div class="profile-img-div"><a href="/teachers/<%=teacher.id%>"><img src="http://i66.tinypic.com/2hwoao9.png"></a></div>
+    </div>
+
+    <div class="teacher-info">
+    <div><h3><%=teacher.fname%> <%=teacher.lname%></h3></div>  
+    <div>myemail@gmail.com</div>
+    <div>917-888-8888</div>
+     <div class="read-div"><a class="teacher-read-more"href="/teachers/<%=teacher.id%>/edit">Read More</a></div>
     
-    <%teacher_cohorts = @cohorts.where(teacher_id: teacher.id)%>
-    <div>
-        
-         <p>Cohorts:</p>
-         <ul>
-    <%teacher_cohorts.each do |cohort|%>
- 
-      <li><%=cohort.name%></li>
-    
-    <%end%>
-       </ul>
-     </div>   
-    <div><a href="/teachers/<%=teacher.id%>/edit"><i class="far fa-edit"></i></a></div>
    </div>
 
    </div>

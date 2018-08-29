@@ -1,7 +1,7 @@
 body{
     margin:0;
     background-color:#EAEEF3;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 
 
 }
@@ -154,9 +154,9 @@ body{
  .add-btn-div{
     display: flex;
     justify-content: flex-end;
-    margin-right: 6.7%;
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-right: 3.5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
  }
 
 
@@ -166,14 +166,16 @@ body{
     justify-content: start;
     flex-wrap: wrap;
     position: relative;
-    left: 6.7%;
+    left: 3.4%;
  }
  .course-div{
-    width: 231px;
-    border:1px solid black;
-    height: 300px;
+    width: 250px;
+    border: 1px solid #bbb8b8;
+    height: 335px;
     margin-right: 2%;
     margin-bottom: 2%;
+    color:#38383a;
+    padding-top: 20px;
  }
 
  /* cohorts table */
@@ -224,7 +226,7 @@ tr:nth-child(even) {
     margin-bottom: 15%;
 }
 .title-div{
-    margin-bottom: 6%;
+    margin-bottom: 4%;
     margin-left: 2%;
 }
 .add-div{
@@ -234,9 +236,10 @@ tr:nth-child(even) {
 .add-cohort{
     box-shadow: 0.5px 0.5px 0.5px 1px rgba(206, 198, 198, 0.75);
     padding: 10px;
-    color: black;
+    color: #333232;
     text-decoration: none;
     background-color:#00c6c3;
+    border-radius: 5px;
    
 }
 
@@ -315,6 +318,7 @@ hr{
 }
 
 #profile-table-div{
+    border-top: 5px solid cornflowerblue;
     width: 75%;
 }
 .info-container{
@@ -336,18 +340,176 @@ hr{
 }
 
 #teacher-table-div{
+    border-top: 5px solid rosybrown;
     width: 75%;
 }
 .small-table-div{
-    margin: 0 auto;
-    width: 25%;
+    width: 23%;
     background-color: white;
-    padding-top: .5%;
     padding-bottom: .5%;
     box-shadow: 3px 3px 5px 5px rgba(206, 198, 198, 0.75);
     margin-left: 5%;
+    height: 230px;
+    border-top: 5px solid darkslateblue;
 }
 .course-display{
     margin: 0 auto;
-    width: 77%;
+    width: 250px;
+    position: relative;
+    top: 15px;
+}
+
+.course-name{
+    color:#3B3E5C;
+    font-weight: bold;
+    font-size: 22px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+.med-table-div{
+    margin: 0 auto;
+    width: 65%;
+    background-color: white;
+    padding-bottom: .5%;
+    box-shadow: 3px 3px 5px 5px rgba(206, 198, 198, 0.75);
+    border-top: 5px solid darkslateblue;
+    height: 430px;
+
+}
+
+.flex{
+    display:flex;
+}
+
+.description-div{
+    width:90%;
+    margin:0 auto;
+}
+
+.description-title{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.hours-div{
+    margin-top:5%;
+}
+
+.date-div{
+    display:flex;
+    justify-content: space-between;
+    width: 60%;
+}
+
+.cohort-name{
+    display: flex;
+    justify-content: space-between;
+    font-size: 22px;
+}
+
+.cohort-table{
+    width: 55%;
+    background-color: white;
+    box-shadow: 3px 3px 5px 5px rgba(206, 198, 198, 0.75);
+    border-top: 5px solid darkslateblue;
+    height: 430px;
+}
+
+#small{
+    width:30%;
+    min-height:430px;
+}
+
+.cohort-flex{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.enrolled th,td{
+    text-align: center;
+}
+#student-heading{
+    margin-left: 10px;
+}
+#display-teacher h4, p{
+    display:inline;
+}
+#display-teacher{
+    margin-bottom:15px;
+}
+
+.hover-section:hover{
+    box-shadow: 3px 3px 5px 5px rgba(206, 198, 198, 0.75);
+
+}
+
+.edit-hover:hover{
+    box-shadow: 1px 1px 2px 2px rgba(206, 198, 198, 0.75);
+}
+
+td a{
+    text-decoration: none;
+}
+
+.cohort-edit-icon{
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.course-heading h3{
+    font-weight: 700;
+    font-size: 25px;
+    margin: 10px;
+}
+.course-main-about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.read-div{
+    margin-top: 25px;
+}
+.read-more{
+    text-decoration: none;
+    color:white;
+    background-color:#00c6c3;
+    padding: 10px;
+    box-shadow: 0.5px 0.5px 0.5px 1px rgba(206, 198, 198, 0.75);
+    border-radius: 3px;
+}
+.course-edit-icon{
+    margin-top: 15px;
+    font-size:20px;
+
+}
+.teacher-border{
+    width: 130px;
+    height: 130px;
+    border: 2px solid #c7c3c3;
+    border-radius: 50%;
+    margin: 0 auto;
+}
+.teacher-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.teacher-info h3{
+    font-weight: 700;
+    font-size: 23px;
+    margin: 10px;
+}
+.teacher-read-more{
+    text-decoration: none;
+    color: white;
+    background-color: #da3d93;
+    padding: 6px 14px;
+    box-shadow: 0.5px 0.5px 0.5px 1px rgba(206, 198, 198, 0.75);
+    border-radius: 80px;
+    font-size: 13px;
 }
