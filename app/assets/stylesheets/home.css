@@ -513,3 +513,13 @@ td a{
     border-radius: 80px;
     font-size: 13px;
 }
+.trash-div{
+    width: 18px;
+}
+#edit-icon{
+    font-size: 18px;
+}
+.edit-row{
+    display: flex;
+    justify-content: space-evenly;
+}

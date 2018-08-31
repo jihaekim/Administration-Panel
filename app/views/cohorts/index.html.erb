@@ -6,7 +6,7 @@
 <div class="table-div">
 
 <div id="table-container">
-<div class="add-div"><a class="add-cohort" href="/cohorts/new"><i class="fas fa-plus"></i>Add Course</a></div>
+<div class="add-div"><a class="add-cohort" href="/cohorts/new"><i class="fas fa-plus"></i>Add Cohort</a></div>
 <table>
 <tr>
 <th>Name</th>
@@ -25,7 +25,12 @@
    <td><%=current_teacher.fname%> <%=current_teacher.lname%></p></td>
    <%current_course = @courses.find(cohort.course_id)%>
    <td><%=current_course.name%></td>
-   <td><div><a href="/cohorts/<%=cohort.id%>/edit"><i class="far fa-edit"></i></a></div></td>
+
+   <td class="edit-row">
+   <div><a href="/cohorts/<%=cohort.id%>/edit"><i id="edit-icon"class="far fa-edit"></i></a></div>
+   <div class="trash-div"><%= link_to image_tag('trash-alt-regular.svg',:class => 'delete-btn'),cohort_path(cohort), method: :delete, remote:true, data: { confirm: 'Are you sure?' } %></div>
+   </td>
+
    </tr>
    <% end %>
 </table>
