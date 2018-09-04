@@ -12,21 +12,21 @@
 
   <body>
 
-
 <div id="nav">
 <div id="logo">
-
+<h3>NYCDA</h3>
 </div>
 
 <div id="icon">
 <div><img src="http://i66.tinypic.com/50muex.png"></div>
-<p>Name</p>
+
 <div id="dropdown">
 <i class="fas fa-sort-down"></i>
  <div id="drop-content">
- <p>Logout</p>
+ <p><%= link_to "Log Out", destroy_admin_session_path, method: :delete %></p>
  </div>
 </div>
+
 </div>
 </div>
 
@@ -44,6 +44,7 @@
 <a href="/teachers"><div>Teachers<i class="fas fa-angle-right"></i></div></a>
 <a href="/cohorts"><div>Cohort<i class="fas fa-angle-right"></i></div></a>
 <a href="/courses"><div>Courses<i class="fas fa-angle-right"></i></div></a>
+<%= link_to "Log Out", destroy_admin_session_path, method: :delete %>
 </div>
 
 </div>

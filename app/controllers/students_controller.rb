@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+    before_action :authenticate_admin!
     def index
         @students = Student.all
         @cohorts = Cohort.all
@@ -37,5 +38,5 @@ end
 private
 
 def student_params
-    params.require(:student).permit(:fname,:lname,:age,:cohort_id)
+    params.require(:student).permit(:fname,:lname,:age,:cohort_id,:phone_number,:email,:pic_url)
 end

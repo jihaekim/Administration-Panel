@@ -1,4 +1,5 @@
 class TeachersController < ApplicationController
+    before_action :authenticate_admin!
     def index
         @teachers = Teacher.all
         @cohorts = Cohort.all
@@ -40,5 +41,5 @@ end
 private
 
 def teacher_params
-    params.require(:teacher).permit(:fname,:lname,:age,:salary,:education)
+    params.require(:teacher).permit(:fname,:lname,:age,:salary,:education,:phone_number,:email,:pic_url)
 end

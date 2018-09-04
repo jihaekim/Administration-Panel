@@ -21,7 +21,14 @@
     <td><%=student.fname%> <%=student.lname%></td>
     <td><%=student.age%></td>
     <td><%= @cohorts.find(student.cohort_id).name%></td>
-   <td><div><a class="edit-hover" href="/students/<%=student.id%>/edit"><i class="far fa-edit"></i></a></div></td>
+
+   <td>
+   <div class="edit-section">
+   <div><a class="edit-hover" href="/students/<%=student.id%>/edit"><i class="far fa-edit"></i></a></div>
+   <div class="trash-div"><%= link_to image_tag('trash-alt-regular.svg',:class => 'delete-btn-student'),student_path(student), method: :delete, remote:true, data: { confirm: 'Are you sure?' } %></div>
+   <div>
+   </td>
+
    </tr>
    <% end %>
 </table>

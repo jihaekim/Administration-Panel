@@ -30,27 +30,32 @@ body{
 
 #icon{
     display: flex;
-    margin-left: auto;
+    margin-left: 72%;
     justify-content: space-evenly;
-    width: 125px;
+    width: 80px;
     align-items: center;
 }
 #dropdown{
     position:relative;
     display:inline-block;
+
 }
 
 #drop-content{
     display:none;
-    position:absolute;
+    position: absolute;
     z-index: 1;
-    min-width:160px;
+    min-width: 60px;
 }
 
 #dropdown:hover #drop-content{
     display:block;
 }
 
+#drop-content p a{
+    text-decoration: none;
+    color:black; 
+}
 #sidenav{
     height:100%;
     width: 16.5%;
@@ -85,10 +90,6 @@ body{
     display:flex;
     align-items: center;
     padding-left: 22%;
-}
-
-#icon-div p {
-    padding-left: 5%;
 }
 
 #display-container{
@@ -252,7 +253,12 @@ tr:nth-child(even) {
     font-size: 15px;
     color: grey;
     margin: 0 auto;
-    width: 75%;
+    width: 80%;
+}
+
+.form-flex{
+    display:flex;
+    justify-content: space-between;
 }
 
 .new-input-div{
@@ -267,10 +273,6 @@ tr:nth-child(even) {
 }
 
 
-.form-inner{
-    justify-content: space-between;
-    display:flex;
-}
 .new-submit{
     text-align: center;
     margin-top: 40px;
@@ -324,24 +326,40 @@ hr{
 .info-container{
     margin: 0 auto;
     width: 60%;
-    margin-top: 5%;
-}
+    margin-top: 3%;
+}  
 .name-display{
     display: flex;
     justify-content: space-between;
 }
 
 .display-info{
+    display: flex;
+    justify-content: space-between;
     margin: 0 auto;
     width: 70%;
     margin-top: 10%;
     margin-bottom: 10%;
-    font-size: 18px;
+    font-size: 17px;
 }
+.line{
+    margin-bottom:7%;
+}
+.info-font{
+    font-size: 16px;
+    color: #555655;
+}
+
 
 #teacher-table-div{
     border-top: 5px solid rosybrown;
     width: 75%;
+}
+
+.person-edit-icon{
+    text-align: right;
+    width: 95%;
+    margin-top: 2%;
 }
 .small-table-div{
     width: 23%;
@@ -459,6 +477,14 @@ td a{
     font-size: 20px;
 }
 
+.edit-section{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    align-items: center;
+}
+
 .course-heading h3{
     font-weight: 700;
     font-size: 25px;
@@ -514,7 +540,7 @@ td a{
     font-size: 13px;
 }
 .trash-div{
-    width: 18px;
+    width: 19px;
 }
 #edit-icon{
     font-size: 18px;
@@ -620,4 +646,26 @@ td a{
     color: black;
     font-weight: 600;
     font-size: 14px;  
+}
+.show-icons{
+    display:flex;
+    width: 55px;
+    justify-content: space-between;
+}
+.show{
+    margin-top: 17px;
+    font-size: 20px;
+}
+
+
+.far{
+    font-size:20px;
+}
+
+.delete-btn-student{
+    margin-top: 3px;
+}
+
+.bold{
+    font-weight: 800;
 }

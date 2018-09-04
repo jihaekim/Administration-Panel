@@ -1,10 +1,12 @@
 class CoursesController < ApplicationController
+    before_action :authenticate_admin!
     def index
         @courses = Course.all
         
     end
 
     def show
+       
         @course = Course.find(params[:id])
     end
 
@@ -35,5 +37,5 @@ end
 private
 
 def course_params
-    params.require(:course).permit(:name,:hours)
+    params.require(:course).permit(:name,:hours,:pic_url)
 end

@@ -14,13 +14,13 @@
     <div class="course-div">
 
     <div class="teacher-border">
-    <div class="profile-img-div"><a href="/teachers/<%=teacher.id%>"><img src="http://i66.tinypic.com/2hwoao9.png"></a></div>
+    <div class="profile-img-div"><a href="/teachers/<%=teacher.id%>"><img src="<%=teacher.pic_url%>"></a></div>
     </div>
 
     <div class="teacher-info">
     <div><h3><%=teacher.fname%> <%=teacher.lname%></h3></div>  
-    <div>myemail@gmail.com</div>
-    <div>917-888-8888</div>
+    <div><%=teacher.email%></div>
+    <div><%=number_to_phone(teacher.phone_number)%></div>
      <div class="read-div"><a class="teacher-read-more"href="/teachers/<%=teacher.id%>">Read More</a></div>
     
    </div>

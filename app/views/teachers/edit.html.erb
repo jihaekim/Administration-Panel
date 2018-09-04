@@ -9,19 +9,26 @@
 <%= form_with model: @teacher do |form| %>
     <div class="new-form-div">
 
+    <div class="form-flex">
     <div class="form-inner">
     <div class="new-input-div"><div><p>First Name</p></div><%= form.text_field :fname %></div>
-    <div class="new-input-div"><div><p>Last Name</p></div><%= form.text_field :lname %></div>
-    </div>
     <div class="new-input-div"><div><p>Age</p></div><%= form.text_field :age %></div>
     <div class="new-input-div"><div><p>Salary</p></div><%= form.text_field :salary %></div>
-    <div class="new-input-div"><div><p>Education</p></div><%= form.text_field :education %></div>
+    <div class="new-input-div"><div><p>Education</p></div><%= form.text_field :education%></div>
+   </div>
+   
+   <div class="form-inner">
+    <div class="new-input-div"><div><p>Last Name</p></div><%= form.text_field :lname %></div>
+    <div class="new-input-div"><div><p>Phone Number</p></div><%= form.telephone_field :phone_number %></div>
+    <div class="new-input-div"><div><p>Email</p></div><%= form.email_field :email%></div>
+    <div class="new-input-div"><div><p>Picture</p></div><%= form.text_field :pic_url%></div>
+   </div>
+   </div>
+   
     <div class="new-submit"><%= form.submit %></div>
-
-</div>
-<% end %>
-
-
-</div>
-</div>
-</div>
+   
+   <% end %>
+   
+   </div>
+   </div>
+   </div>
