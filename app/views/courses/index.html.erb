@@ -12,7 +12,7 @@
 
 <% @courses.each do |course|%>
     <div class="course-div">
-    <div><a href="/courses/<%=course.id%>"><img src="https://via.placeholder.com/250x170"></a></div>
+    <div class="course-img-div"><a href="/courses/<%=course.id%>"><img src="<%=course.pic_url%>"></a></div>
 
     <div class="course-main-about">
     <div class="course-heading"><h3><%=course.name%></h3></div>

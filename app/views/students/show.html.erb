@@ -8,17 +8,43 @@
 <div class = "info-container">
 
 <div class="profile-border">
-<div class="profile-img-div"><img src="http://i66.tinypic.com/2hwoao9.png"></div>
+<div class="profile-img-div"><img src="<%=@student.pic_url%>"></div>
 </div>
 
 <div class="display-info">
-<div class="name-display"><div>First name: <%=@student.fname %> </div> <div>Last name: <%=@student.lname %></div> </div>
 
-<p>Age: <%=@student.age %></p>
-<p>Cohort: <%=@student.cohort_id %></p>
+<div>
+<div class="line">
+<div class="bold">Full Name</div> <div class="info-font"><%=@student.fname %> <%=@student.lname %></div>
+</div>
+
+<div class="line">
+<div class="bold">Email</div> <div class="info-font"><%=@student.email %> </div>
+</div>
+
+<div class="line">
+<div class="bold">Cohort</div> <div class="info-font"><%=@student.cohort_id %></div>
+</div>
+
 </div>
 
 
+
+<div>
+
+<div class="line">
+<div class="bold">Phone Number</div> <div class="info-font"><%=number_to_phone(@student.phone_number) %></div>
+</div>
+
+<div class="line">
+<div class="bold">Age</div>  <div class="info-font"><%=@student.age %></div>
+</div>
+
+</div>
+
+
+
+</div>
 </div>
 
 </div>

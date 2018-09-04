@@ -16,6 +16,7 @@ class CoursesController < ApplicationController
 
     def create
         @course = Course.create(course_params)
+        redirect_to :controller => 'courses', :action => 'index'
     end
     
     def edit
@@ -25,11 +26,14 @@ class CoursesController < ApplicationController
     def update
         @course = Course.find(params[:id])
         @course.update(course_params)
+        redirect_to :controller => 'courses', :action => 'index'
     end
     
     def destroy
         @course = Course.find(params[:id])
         @course.destroy
+
+        redirect_to :controller => 'courses', :action => 'index'
     end
  
 end

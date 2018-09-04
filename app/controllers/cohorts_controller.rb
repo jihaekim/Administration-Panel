@@ -15,10 +15,12 @@ class CohortsController < ApplicationController
 
     def new
         @cohort = Cohort.new
+        
     end
     
     def create
         @cohort = Cohort.create(cohort_params)
+        redirect_to :controller => 'cohorts', :action => 'index'
     end
 
     def edit
@@ -27,6 +29,7 @@ class CohortsController < ApplicationController
     def update
         @cohort = Cohort.find(params[:id])
         @cohort.update(cohort_params)
+        redirect_to :controller => 'cohorts', :action => 'index'
     end
 
     def destroy
