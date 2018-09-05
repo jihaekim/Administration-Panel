@@ -1,16 +1,40 @@
-<%=@course.name%>
-<%=@course.hours%>
+
 
 
 <div class="div-inner">
 <div class="title-div"><h3>Course Details</h3></div>
 
-
+<div class="flex">
 <div class="small-table-div">
 
 <div class="course-display">
-<div><img src="https://via.placeholder.com/231x150"></div>
-<div><%=@course.name%></div>
+<div class="course-img-div"><img src="<%=@course.pic_url%>"></div>
+<div class="course-name"><%=@course.name%></div>
 </div>
+</div>
+
+
+<div class="med-table-div">
+
+<div class="description-div">
+<div class="description-title">
+<h3>Description</h3>
+<div class="show-icons">
+<div class="course-edit-icon"><a href="/courses/<%=@course.id%>/edit"><i class="far fa-edit"></i></a></div>
+<div class="trash-div show"><%= link_to image_tag('trash-alt-regular.svg',:class => 'delete-btn'),course_path(@course), method: :delete, remote:true, data: { confirm: 'Are you sure?' } %></div>
+</div>
+</div>
+
+<div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p></div>
+
+<div class="hours-div">
+<div><h3>Course Hours</h3></div>
+<div><p><%=@course.hours%></p></div>   
+</div>
+
+</div>
+
+</div>
+
 </div>
 </div>

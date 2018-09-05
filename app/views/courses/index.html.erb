@@ -12,12 +12,12 @@
 
 <% @courses.each do |course|%>
     <div class="course-div">
-    <div><a href="#display all the cohorts in that course"><img src="https://via.placeholder.com/231x150"></a></div>
+    <div class="course-img-div"><a href="/courses/<%=course.id%>"><img src="<%=course.pic_url%>"></a></div>
 
-    <div>
-    <div><%=course.name%></div>
-    <div><%=course.hours%></div>
-    <div><a href="/courses/<%=course.id%>/edit"><i class="far fa-edit"></i></a></div>
+    <div class="course-main-about">
+    <div class="course-heading"><h3><%=course.name%></h3></div>
+    <div><p>Hours: <%=course.hours%></p></div>
+    <div class="read-div"><a class="read-more" href="/courses/<%=course.id%>">Read More</a></div>
    </div>
 
    </div>

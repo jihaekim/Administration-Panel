@@ -40,6 +40,7 @@ ActiveRecord::Schema.define(version: 2018_08_28_172700) do
   create_table "courses", force: :cascade do |t|
     t.string "name"
     t.integer "hours"
+    t.string "pic_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -49,6 +50,9 @@ ActiveRecord::Schema.define(version: 2018_08_28_172700) do
     t.string "lname"
     t.integer "age"
     t.integer "cohort_id"
+    t.string "email"
+    t.string "phone_number"
+    t.string "pic_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -59,6 +63,9 @@ ActiveRecord::Schema.define(version: 2018_08_28_172700) do
     t.integer "age"
     t.integer "salary"
     t.string "education"
+    t.string "email"
+    t.string "phone_number"
+    t.string "pic_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

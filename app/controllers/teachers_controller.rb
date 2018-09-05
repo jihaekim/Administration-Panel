@@ -1,4 +1,5 @@
 class TeachersController < ApplicationController
+    before_action :authenticate_admin!
     def index
         @teachers = Teacher.all
         @cohorts = Cohort.all
@@ -15,7 +16,8 @@ class TeachersController < ApplicationController
 
     def create
       @teacher = Teacher.create(teacher_params)
-      redirect_to new_teacher_path
+
+      redirect_to :controller => 'teachers', :action => 'index'
 
     end
 
@@ -27,6 +29,13 @@ class TeachersController < ApplicationController
     def update
         @teacher = Teacher.find(params[:id])
         @teacher.update(teacher_params)
+        redirect_to :controller => 'teachers', :action => 'index'
+    end
+
+    def destroy
+        @teacher = Teacher.find(params[:id])
+        @teacher.destroy
+        redirect_to :controller => 'teachers', :action => 'index'
     end
 end
 
@@ -35,5 +44,5 @@ end
 private
 
 def teacher_params
-    params.require(:teacher).permit(:fname,:lname,:age,:salary,:education)
+    params.require(:teacher).permit(:fname,:lname,:age,:salary,:education,:phone_number,:email,:pic_url)
 end

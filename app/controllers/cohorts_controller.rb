@@ -1,4 +1,5 @@
 class CohortsController < ApplicationController
+    before_action :authenticate_admin!
     
     def index
         @cohorts = Cohort.all
@@ -8,14 +9,18 @@ class CohortsController < ApplicationController
 
     def show
         @cohort = Cohort.find(params[:id])
+        @teachers = Teacher.all
+        @students = Student.all
     end
 
     def new
         @cohort = Cohort.new
+        
     end
     
     def create
         @cohort = Cohort.create(cohort_params)
+        redirect_to :controller => 'cohorts', :action => 'index'
     end
 
     def edit
@@ -24,6 +29,14 @@ class CohortsController < ApplicationController
     def update
         @cohort = Cohort.find(params[:id])
         @cohort.update(cohort_params)
+        redirect_to :controller => 'cohorts', :action => 'index'
+    end
+
+    def destroy
+        @cohort = Cohort.find(params[:id])
+        @cohort.destroy
+
+        redirect_to :controller => 'cohorts', :action => 'index'
     end
 
 

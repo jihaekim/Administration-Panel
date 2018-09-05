@@ -1,3 +1,73 @@
-<p>Course name: <%=@cohort.name %></p>
-<p>Start date: <%=@cohort.start_date %></p>
-<p>End date: <%=@cohort.end_date %></p>
+<div class="div-inner">
+<div class="title-div"><h3>Cohort Details</h3></div>
+
+<div class="cohort-flex">
+
+<div class ="cohort-table">
+
+<div class="description-div">
+<div class="cohort-name">
+<h3> <%=@cohort.name %></h3>
+<div class="cohort-edit-icon"><a href="/cohorts/<%=@cohort.id%>/edit"><i class="far fa-edit"></i></a></div>
+</div>
+
+
+
+
+
+
+
+<div class="cohort-description">
+<div><h3>Description</h3></div>
+
+<% teacher_id = @cohort.teacher_id%>
+<% current_teacher = @teachers.find(teacher_id) %>
+<div id="display-teacher"> <h4>Instructor </h4> <p><%=current_teacher.fname%> <%=current_teacher.lname%></p></div>
+
+<div><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p></div>
+</div>
+
+<div class="date-outer">
+<h4>Duration</h4>
+<div class="date-div">
+<div><p>Start date <%=@cohort.start_date %></p></div>
+<div><p>End date <%=@cohort.end_date %></p></div>
+</div>
+</div>
+
+</div>
+</div>
+
+
+<div class="cohort-table" id="small">
+
+<div id="student-heading"><h3>Students Enrolled</h3></div>
+
+<div>
+<table class="enrolled">
+
+<tr>
+<th></th>
+<th>Name</th>
+<th>Edit</th>
+</tr>
+
+<% id = @cohort.id%>
+<% cohort_students = @students.where(cohort_id: id) %>
+<% cohort_students.each do |student| %>
+
+
+<tr>
+<td class="hover-section"><a href="/students/<%=student.id%>"><img src="<%=student.pic_url%>"></a> </td>
+<td><%= student.fname%> <%= student.lname%></td>
+<td><div><a href="/students/<%=student.id%>/edit"><i class="far fa-edit"></i></a></div></td>
+<%end%>
+</tr>
+
+</table>
+</div>
+</div>
+
+</div>
+</div>

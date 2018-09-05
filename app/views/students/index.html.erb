@@ -17,11 +17,18 @@
 </tr>
 <% @students.each do |student|%>
     <tr>
-    <td class="img-section"><a href="/students/<%=student.id%>"><img src="http://i63.tinypic.com/wc1dhf.png"></a> </td>
+    <td class="hover-section"><a href="/students/<%=student.id%>"><div><img src="<%=student.pic_url%>"></div></a> </td>
     <td><%=student.fname%> <%=student.lname%></td>
     <td><%=student.age%></td>
-    <td><%= @cohorts.find(student.cohort_id).name%></td>
-   <td><div><a href="/students/<%=student.id%>/edit"><i class="far fa-edit"></i></a></div></td>
+    <td><a href="/cohorts/<%= @cohorts.find(student.cohort_id).id%>"> <%= @cohorts.find(student.cohort_id).name%></a></td>
+
+   <td>
+   <div class="edit-section">
+   <div><a class="edit-hover" href="/students/<%=student.id%>/edit"><i class="far fa-edit"></i></a></div>
+   <div class="trash-div"><%= link_to image_tag('trash-alt-regular.svg',:class => 'delete-btn-student'),student_path(student), method: :delete, remote:true, data: { confirm: 'Are you sure?' } %></div>
+   <div>
+   </td>
+
    </tr>
    <% end %>
 </table>
