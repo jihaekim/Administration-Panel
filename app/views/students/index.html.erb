@@ -7,9 +7,10 @@
 
 <div id="table-container">
 <div class="add-div"><a class="add-cohort" href="/students/new"><i class="fas fa-plus"></i>Add Student</a></div>
-<table>
+<table class="display-students-table">
 <tr>
 <th></th>
+<th>Id</th>
 <th>Name</th>
 <th>Age</th>
 <th>Cohort</th>
@@ -18,7 +19,9 @@
 <% @students.each do |student|%>
     <tr>
     <td class="hover-section"><a href="/students/<%=student.id%>"><div><img src="<%=student.pic_url%>"></div></a> </td>
-    <td><%=student.fname%> <%=student.lname%></td>
+    <td><%=student.id%></td>
+    <td><a href="students/<%=student.id%>"><%=student.fname%> <%=student.lname%></a></td>
+    
     <td><%=student.age%></td>
     <td><a href="/cohorts/<%= @cohorts.find(student.cohort_id).id%>"> <%= @cohorts.find(student.cohort_id).name%></a></td>
 

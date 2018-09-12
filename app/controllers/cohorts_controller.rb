@@ -2,7 +2,7 @@ class CohortsController < ApplicationController
     before_action :authenticate_admin!
     
     def index
-        @cohorts = Cohort.all
+        @cohorts = Cohort.order("id ASC")
         @teachers = Teacher.all
         @courses = Course.all
     end
