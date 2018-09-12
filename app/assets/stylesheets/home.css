@@ -207,15 +207,11 @@ body{
 
  td, th {
     border: 1px solid#E6ECF2;
-    text-align: left;
-    padding: 8px;
-}
-
-th{
+    text-align: center;
     padding-top: 15px;
     padding-bottom: 15px;
-
 }
+
 #table-container{
     border: 1px solid#E6ECF2;
     width: 96%;
@@ -262,7 +258,15 @@ tr:nth-child(even) {
 .add-cohort:hover{
     box-shadow: 1px 1px 1px 3px rgba(206, 198, 198, 0.75);
 }
-
+.name-table{
+    width:25%;
+}
+.date-table{
+    width:10%;
+}
+.course-table,.instructor-table{
+    width: 20%;
+}
 /* New cohort css */
 .new-form-div{
     font-size: 15px;
@@ -426,8 +430,14 @@ hr{
 }
 
 
-.hours-div{
+.hours-id-div{
     margin-top:5%;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+}
+.hours-id-div div{
+    text-align:center;
 }
 
 .date-div{
@@ -567,14 +577,17 @@ td a{
     width: 19px;
 }
 #edit-icon{
-    font-size: 18px;
+    font-size: 20px;
 }
 .edit-row{
     display: flex;
     justify-content: space-evenly;
 }
 
-
+.display-students-table th,td{
+    padding-top:8px;
+    padding-bottom:8px;
+}
 
 /* devise login css */
 .devise-body{

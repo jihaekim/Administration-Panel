@@ -1,7 +1,8 @@
 class StudentsController < ApplicationController
     before_action :authenticate_admin!
     def index
-        @students = Student.all
+        @students = Student.order("id ASC")
+        
         @cohorts = Cohort.all
     end
 
@@ -11,6 +12,7 @@ class StudentsController < ApplicationController
 
     def new
         @student = Student.new
+        
         
     end
 

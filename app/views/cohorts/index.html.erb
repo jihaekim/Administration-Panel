@@ -9,22 +9,24 @@
 <div class="add-div"><a class="add-cohort" href="/cohorts/new"><i class="fas fa-plus"></i>Add Cohort</a></div>
 <table>
 <tr>
-<th>Name</th>
-<th>Start date</th>
-<th>End date</th>
-<th>Instructor</th>
-<th>Course</th>
+<th>Id</th>
+<th class="name-table">Name</th>
+<th class="date-table">Start date</th>
+<th class="date-table">End date</th>
+<th class="instructor-table">Instructor</th>
+<th class="course-table">Course</th>
 <th>Edit</th>
 </tr>
 <% @cohorts.each do |cohort|%>
     <tr>
-    <td><a href="/cohorts/<%=cohort.id%>"><%=cohort.name%></a></td>
-    <td><%=cohort.start_date%></td>
-    <td><%=cohort.end_date%></td>
+    <td><%=cohort.id%></td>
+    <td class="name-table"><a href="/cohorts/<%=cohort.id%>"><%=cohort.name%></a></td>
+    <td class="date-table"><%=cohort.start_date.strftime("%m/%d/%Y")%></td>
+    <td class="date-table"><%=cohort.end_date.strftime("%m/%d/%Y")%></td>
    <%current_teacher = @teachers.find(cohort.teacher_id)%>
-   <td><%=current_teacher.fname%> <%=current_teacher.lname%></p></td>
+   <td class="instructor-table"><a href="/teachers/<%=current_teacher.id%>"><%=current_teacher.fname%> <%=current_teacher.lname%></a></td>
    <%current_course = @courses.find(cohort.course_id)%>
-   <td><%=current_course.name%></td>
+   <td class="course-table"><a href="/courses/<%=current_course.id%>"><%=current_course.name%></a></td>
 
    <td class="edit-row">
    <div><a href="/cohorts/<%=cohort.id%>/edit"><i id="edit-icon"class="far fa-edit"></i></a></div>
