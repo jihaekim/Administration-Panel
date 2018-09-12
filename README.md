@@ -3,7 +3,6 @@ Full stack admin panel for a fictitious school whereby the administator can crea
 <img src="/images/panel.png">
 
 <h4>Features</h4>
-<hr>
 <ul>
   <li>Admin can sign in and log out</li>
   <li>Admin can add/edit/delete students, cohorts, and courses</li>
