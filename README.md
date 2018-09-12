@@ -20,6 +20,8 @@ Full stack admin panel for a fictitious school whereby the administator can crea
 </ul>
 
 <div>Deployed to Heroku: https://frozen-scrubland-50168.herokuapp.com/</div>
-<div><strong>Test Login Information</strong></div>
+<p><strong>Test Login Information</strong></p>
+<div>
 <p><strong>username:</strong> admin@gmail.com</p>
 <p><strong>password:</strong> 123456</p>
+</div>
