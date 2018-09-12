@@ -462,6 +462,9 @@ hr{
 
 #small{
     width:30%;
+    background-color: white;
+    box-shadow: 3px 3px 5px 5px rgba(206, 198, 198, 0.75);
+    border-top: 5px solid darkslateblue;
     min-height:430px;
 }
 
@@ -476,6 +479,10 @@ hr{
 }
 #student-heading{
     margin-left: 10px;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 86%;
 }
 #display-teacher h4, p{
     display:inline;
