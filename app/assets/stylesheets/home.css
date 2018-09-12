@@ -713,3 +713,11 @@ td a{
 .bold{
     font-weight: 800;
 }
+
+.forgot-title{
+    margin-top: 60px;
+}
+
+#form_id{
+    height: 200px;
+}
