@@ -19,7 +19,7 @@ Full stack admin panel for a fictitious school whereby the administator can crea
   <li>Deletion of student files is enabled via an Ajax call</li>
 </ul>
 
-Deployed to Heroku: https://frozen-scrubland-50168.herokuapp.com/
-<strong>Test Login Information</strong>
-<strong>username:</strong> admin@gmail.com
-<strong>password:</strong> 123456
+<div>Deployed to Heroku: https://frozen-scrubland-50168.herokuapp.com/</div>
+<div><strong>Test Login Information</strong></div>
+<p><strong>username:</strong> admin@gmail.com</p>
+<p><strong>password:</strong> 123456</p>
