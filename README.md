@@ -1,22 +1,25 @@
 # Administration Panel
-Full stack blog application that allows users to share information about a particular topic. Users are able to create posts to share photos, write blog posts, as well as edit and delete the posts.
+Full stack admin panel for a fictitious school whereby the administator can create users and complete common administrative tasks
 <img src="/images/panel.png">
 
 <h4>Features</h4>
 <hr>
 <ul>
-  <li>User can create/delete and login to an account using a username and password</li>
-  <li>User can create/edit/delete posts that include image and text</li>
-  <li>User can view posts created by other users</li>
+  <li>Admin can sign in and log out</li>
+  <li>Admin can add/edit/delete students, cohorts, and courses</li>
+  <li>Admin can view all information regarding students, corhots, and courses</li>
+  <li>Information can only been seen when logged in</li>
 </ul>
 
 <h4>Built With</h4>
 <ul>
-  <li>Ruby</li>
-  <li>ActiveRecord</li>
-  <li>Postrgesql database</li>
-  <li>SASS</li>
-  <li>Bootstrap</li>
+  <li>Ruby on Rails</li>
+  <li>ActiveRecord used to make all database transactions</li>
+  <li>User authentification implemented with Devise gem</li>
+  <li>Deletion of student files is enabled via an Ajax call</li>
 </ul>
 
-<h4></h4>
+Deployed to Heroku: https://frozen-scrubland-50168.herokuapp.com/
+<strong>Test Login Information</strong>
+<strong>username:</strong> admin@gmail.com
+<strong>password:</strong> 123456
