@@ -4,7 +4,11 @@
 <div class="div-inner">
 <div class="title-div"><h3>Student Profile</h3></div>
 <div id="profile-table-div" class="table-div">
+<div class="edit-delete-div">
 <div class="person-edit-icon"><a href="/students/<%=@student.id%>/edit"><i class="far fa-edit"></i></a></div>
+<div class="trash-div"><%= link_to image_tag('trash-alt-regular.svg',:class => 'delete-btn-student'),student_path(@student), method: :delete, remote:true, data: { confirm: 'Are you sure?' } %></div>
+</div>
+
 <div class = "info-container">
 
 <div class="profile-border">
@@ -23,7 +27,11 @@
 </div>
 
 <div class="line">
+<% if @student.cohort_id.nil?%>
+<div class="bold">Cohort</div> <div class="info-font">N/A</div>
+    <%else%>
 <div class="bold">Cohort</div> <div class="info-font"><%=@student.cohort_id %></div>
+<%end%>
 </div>
 
 </div>

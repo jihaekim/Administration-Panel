@@ -1,3 +1,3 @@
 class Student < ApplicationRecord
-    belongs_to :cohort, dependent: :destroy
+    belongs_to :cohort
 end

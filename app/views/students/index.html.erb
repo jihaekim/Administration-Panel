@@ -21,10 +21,13 @@
     <td class="hover-section"><a href="/students/<%=student.id%>"><div><img src="<%=student.pic_url%>"></div></a> </td>
     <td><%=student.id%></td>
     <td><a href="students/<%=student.id%>"><%=student.fname%> <%=student.lname%></a></td>
-    
     <td><%=student.age%></td>
-    <td><a href="/cohorts/<%= @cohorts.find(student.cohort_id).id%>"> <%= @cohorts.find(student.cohort_id).name%></a></td>
 
+    <% if student.cohort_id.nil?%>
+    <td>N/A</td>
+    <%else%>
+    <td><a href="/cohorts/<%= @cohorts.find(student.cohort_id).id%>"> <%= @cohorts.find(student.cohort_id).name%></a></td>
+    <%end%>
    <td>
    <div class="edit-section">
    <div><a class="edit-hover" href="/students/<%=student.id%>/edit"><i class="far fa-edit"></i></a></div>
