@@ -731,3 +731,7 @@ td a{
     justify-content: space-between;
     margin-left: auto;
 }
+select{
+    width:352px;
+    height: 33px;
+}
