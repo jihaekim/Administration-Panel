@@ -15,6 +15,8 @@ class CohortsController < ApplicationController
 
     def new
         @cohort = Cohort.new
+        @courses = Course.all
+        @teachers = Teacher.all
         
     end
     
@@ -25,6 +27,8 @@ class CohortsController < ApplicationController
 
     def edit
         @cohort = Cohort.find(params[:id])
+        @courses = Course.all
+        @teachers = Teacher.all
     end
     def update
         @cohort = Cohort.find(params[:id])
@@ -38,8 +42,6 @@ class CohortsController < ApplicationController
 
         redirect_to :controller => 'cohorts', :action => 'index'
     end
-
-
 end
 
 private

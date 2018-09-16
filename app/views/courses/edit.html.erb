@@ -8,9 +8,9 @@
 <%= form_with model: @course do |form| %>
   <div class="new-form-div">
 
-  <div class="new-input-div"><div><p>Course Name</p></div><%= form.text_field :name,placeholder:"course name"%></div>
-  <div class="new-input-div"><div><p>Course Hours</p></div><%= form.number_field :hours, placeholder:"course hours"%></div>
-  <div class="new-input-div"><div><p>Picture</p></div><%= form.text_field :pic_url%></div>
+  <div class="new-input-div"><div><p>Course Name</p></div><%= form.text_field :name, required: true%></div>
+  <div class="new-input-div"><div><p>Course Hours</p></div><%= form.number_field :hours, min: 1, required: true%></div>
+  <div class="new-input-div"><div><p>Picture</p></div><%= form.text_field :pic_url, required: true%></div>
   <div class="new-submit"><%= form.submit %></div>
 
   </div>

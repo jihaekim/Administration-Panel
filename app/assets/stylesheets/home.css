@@ -375,11 +375,6 @@ hr{
     width: 75%;
 }
 
-.person-edit-icon{
-    text-align: right;
-    width: 95%;
-    margin-top: 2%;
-}
 .small-table-div{
     width: 23%;
     background-color: white;
@@ -449,9 +444,10 @@ hr{
 .cohort-name{
     display: flex;
     justify-content: space-between;
+}
+.cohort-name h3{
     font-size: 22px;
 }
-
 .cohort-table{
     width: 55%;
     background-color: white;
@@ -513,10 +509,6 @@ td a{
     text-decoration: none;
 }
 
-.cohort-edit-icon{
-    margin-top: 25px;
-    font-size: 20px;
-}
 
 .edit-section{
     width: 80%;
@@ -720,4 +712,26 @@ td a{
 
 #form_id{
     height: 200px;
+}
+
+.edit-delete-div{
+    align-items: center;
+    display: flex;
+    width: 53px;
+    justify-content: space-between;
+    /* text-align: right; */
+    margin-left: auto;
+    margin-right: 60px;
+    margin-top: 30px;
+}
+.cohort-edit-delete-div{
+    align-items: center;
+    display: flex;
+    width: 53px;
+    justify-content: space-between;
+    margin-left: auto;
+}
+select{
+    width:352px;
+    height: 33px;
 }

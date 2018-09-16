@@ -3,7 +3,11 @@
 <div class="div-inner">
 <div class="title-div"><h3>Teacher Profile</h3></div>
 <div id="teacher-table-div" class="table-div">
+
+<div class="edit-delete-div">
 <div class="person-edit-icon"><a href="/teachers/<%=@teacher.id%>/edit"><i class="far fa-edit"></i></a></div>
+<div class="trash-div"><%= link_to image_tag('trash-alt-regular.svg',:class => 'delete-btn-student'),teacher_path(@teacher), method: :delete, remote:true, data: { confirm: 'Are you sure?' } %></div>
+</div>
 
 <div class = "info-container">
 <div class="profile-border">
