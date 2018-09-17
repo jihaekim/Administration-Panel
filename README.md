@@ -1,6 +1,6 @@
 # Administration Panel
 Full stack admin panel for a fictitious school whereby the administator can create users and complete common administrative tasks
-<img src="/images/panel.png">
+<img src="/image/panel.png">
 
 <h4>Features</h4>
 <ul>
