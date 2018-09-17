@@ -26,7 +26,7 @@ class CoursesController < ApplicationController
     def update
         @course = Course.find(params[:id])
         @course.update(course_params)
-        redirect_to :controller => 'courses', :action => 'index'
+        redirect_to :controller => 'courses', :action => 'show'
     end
     
     def destroy

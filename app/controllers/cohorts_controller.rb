@@ -33,7 +33,7 @@ class CohortsController < ApplicationController
     def update
         @cohort = Cohort.find(params[:id])
         @cohort.update(cohort_params)
-        redirect_to :controller => 'cohorts', :action => 'index'
+        redirect_to :controller => 'cohorts', :action => 'show'
     end
 
     def destroy

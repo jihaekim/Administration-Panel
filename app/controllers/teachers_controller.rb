@@ -29,7 +29,7 @@ class TeachersController < ApplicationController
     def update
         @teacher = Teacher.find(params[:id])
         @teacher.update(teacher_params)
-        redirect_to :controller => 'teachers', :action => 'index'
+        redirect_to :controller => 'teachers', :action => 'show'
     end
 
     def destroy
